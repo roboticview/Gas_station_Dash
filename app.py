@@ -8,7 +8,7 @@ cwd = os.getcwd()
 file_path = (f'{cwd}/data/gas_sale.csv')
 
 
-def main():
+def App():
     data = get_data(file_path)
     app = Dash(external_stylesheets=[dbc.themes.LUMEN])
     app.title = 'Gas Prices'
@@ -19,4 +19,4 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    App()
