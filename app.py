@@ -11,7 +11,7 @@ file_path = (f'{cwd}/data/gas_sale.csv')
 def main():
     data = get_data(file_path)
     app = Dash(external_stylesheets=[dbc.themes.LUMEN])
-    server = app.server
+    # server = app.server
     app.title = 'Gas Prices'
     app.layout = create_layout(app, data)
     app.run_server(debug=True)
