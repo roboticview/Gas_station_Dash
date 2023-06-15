@@ -27,13 +27,12 @@ Step 4
 In App.py file make sure the app instance is out of function and app is defined outside of any functions and no indentation, add __name__ into Dash()
 ```
 app = Dash(__name__, external_stylesheets=[dbc.themes.LUMEN])
-app.title = 'Gas Prices'
-app.layout = create_layout(app, data)
 server = app.server
-```
+app.layout = create_layout(app, data)
 
 if __name__ == '__main__':
     app.run_server(debug=True)
+```
 
 Step 5
 
