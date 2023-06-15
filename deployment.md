@@ -10,7 +10,9 @@ Create Procfile
 
 In Procfile add
 
+```
 web: gunicorn app:server 
+```
 
 Step 3
 
@@ -20,11 +22,14 @@ Check current Python version supported by DigitalOcean
 
 In runtime.txt add
 
+```
 python-3.9.15
+```
 
 Step 4
 
 In App.py file make sure the app instance is out of function and app is defined outside of any functions and no indentation, add __name__ into Dash()
+
 ```
 app = Dash(__name__, external_stylesheets=[dbc.themes.LUMEN])
 server = app.server
@@ -40,10 +45,12 @@ Create .gitignore file
 
 In .gitignore add
 
+```
 *.pyc
 __pycache__
 .DS_Store
 venv
+```
 
 Step 6
 
@@ -57,5 +64,6 @@ Step 8
 
 In DigitalOcean app settings add command
 
+```
 gunicorn --worker-tmp-dir /dev/shm --timeout 120 app:server
-
+```
