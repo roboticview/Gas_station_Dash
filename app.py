@@ -3,16 +3,16 @@ import dash_bootstrap_components as dbc
 from layout import create_layout
 from data.util import get_data
 import os
-from flask import Flask
+
 
 cwd = os.getcwd()
 file_path = (f'{cwd}/data/gas_sale.csv')
 
-server = Flask(__name__)
+
 
 def main():
     data = get_data(file_path)
-    app = Dash(external_stylesheets=[dbc.themes.LUMEN])
+    app = Dash(__name__, external_stylesheets=[dbc.themes.LUMEN])
     app.title = 'Gas Prices'
     app.layout = create_layout(app, data)
     server = app.server
