@@ -10,15 +10,15 @@ file_path = (f'{cwd}/data/gas_sale.csv')
 
 
 
-def main():
-    data = get_data(file_path)
-    app = Dash(__name__, external_stylesheets=[dbc.themes.LUMEN])
-    app.title = 'Gas Prices'
-    app.layout = create_layout(app, data)
-    server = app.server
-    app.run_server(debug=True)
+
+data = get_data(file_path)
+app = Dash(__name__, external_stylesheets=[dbc.themes.LUMEN])
+app.title = 'Gas Prices'
+app.layout = create_layout(app, data)
+server = app.server
 
 
 if __name__ == '__main__':
-    main()
+    app.run_server(debug=True)
+
 
