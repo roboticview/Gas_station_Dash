@@ -1,8 +1,10 @@
 Step 1
 
+```
 pip install gunicorn
 
 pip freeze > requirements.txt
+```
 
 Step 2
 
